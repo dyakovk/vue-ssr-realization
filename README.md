@@ -19,3 +19,9 @@ A basic SSR implementation where the server responds to each request with a hard
 ### `vue-ssr-2`
 
 The server responds with the visited URL using an interpolated page template (index.html) separated to own file
+
+### `vue-ssr-3`
+
+Now we expose a factory function separated to own file that can be repeatedly executed to create fresh app instances for each request to the server.
+
+And we also use the Browser Platform-Specific API (window object) in the logic of our app to demonstrate that it's not working properly. It happens because Node.js can't handle and bind this API with our code at the time of rendering.
